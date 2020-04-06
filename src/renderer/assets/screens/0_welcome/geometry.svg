@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1952.176" height="1269.938" viewBox="0 0 1952.176 1269.938">
+  <g id="Groupe_3161" data-name="Groupe 3161" transform="translate(-2222.816 2050.364)" opacity="0.97">
+    <g id="Polygone_11" data-name="Polygone 11" transform="translate(3981.979 -1530.365) rotate(-112)" fill="none">
+      <path d="M50.088,0l50.088,73.761H0Z" stroke="none"/>
+      <path d="M 50.08777236938477 17.80074310302734 L 18.87820434570312 63.7610969543457 L 81.29734039306641 63.7610969543457 L 50.08777236938477 17.80074310302734 M 50.08777236938477 7.62939453125e-06 L 100.1755447387695 73.76109313964844 L 0 73.76109313964844 L 50.08777236938477 7.62939453125e-06 Z" stroke="none" fill="#ff4a90"/>
+    </g>
+    <path id="Tracé_11747" data-name="Tracé 11747" d="M17774.189,8620.175l-32.3,228.151,281.029,161.607,247.691,450.4,185.441-479.725,266.689-258.992,439.621,126.713" transform="translate(-14988.752 -10252.573)" fill="none" stroke="#21d4ff" stroke-width="10"/>
+    <path id="Tracé_11748" data-name="Tracé 11748" d="M17806.7,8933.4l127.035-183.229,176.93,17.373,90.008-141.562,399.186-5.8,8.766,95.606,151.3,60.949" transform="translate(-15201.503 -10665.473)" fill="none" stroke="#ff4a90" stroke-width="10"/>
+    <g id="Ellipse_758" data-name="Ellipse 758" transform="translate(2457 -1801.85)" fill="none" stroke="#f9982b" stroke-width="10">
+      <circle cx="75.5" cy="75.5" r="75.5" stroke="none"/>
+      <circle cx="75.5" cy="75.5" r="70.5" fill="none"/>
+    </g>
+    <g id="Rectangle_3373" data-name="Rectangle 3373" transform="matrix(0.891, -0.454, 0.454, 0.891, 3596.368, -1780.176)" fill="none" stroke="#4f00ff" stroke-width="10">
+      <rect width="348.372" height="237.73" stroke="none"/>
+      <rect x="5" y="5" width="338.372" height="227.73" fill="none"/>
+    </g>
+    <g id="Polygone_14" data-name="Polygone 14" transform="translate(2331.787 -1557.646) rotate(-30)" fill="none">
+      <path d="M50.088,0l50.088,73.761H0Z" stroke="none"/>
+      <path d="M 50.08777236938477 17.80074310302734 L 18.87820434570312 63.7610969543457 L 81.29734039306641 63.7610969543457 L 50.08777236938477 17.80074310302734 M 50.08777236938477 7.62939453125e-06 L 100.1755447387695 73.76109313964844 L 0 73.76109313964844 L 50.08777236938477 7.62939453125e-06 Z" stroke="none" fill="#fee032"/>
+    </g>
+    <g id="Rectangle_3419" data-name="Rectangle 3419" transform="matrix(0.891, -0.454, 0.454, 0.891, 2222.816, -1335.615)" fill="none" stroke="#00dbcd" stroke-width="10">
+      <rect width="348.372" height="237.73" stroke="none"/>
+      <rect x="5" y="5" width="338.372" height="227.73" fill="none"/>
+    </g>
+  </g>
+</svg>

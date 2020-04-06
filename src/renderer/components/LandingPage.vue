@@ -19,6 +19,9 @@
           <li> <i>􀜋</i>  Statistics </li>
         </router-link>
         <li><i>􀍟</i>  Settings</li>
+         <router-link to="/welcome">
+          <li> <i>􀜋</i>  Welcome </li>
+        </router-link>
       </ul>
     </div>
 
