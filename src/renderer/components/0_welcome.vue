@@ -8,6 +8,22 @@
 <img class="block" src="../assets/icons/logo.svg" alt="Block logo"><img src="../assets/icons/votechain.svg" class="votechain" alt="Votechain">
 </p>
 
+<div class="row">
+<div class="col-lg-2"></div>
+<div class="col-lg-8" style="text-align: center;">
+
+<router-link to="/">
+<button class="btn gradient_OP">Sign up</button>
+</router-link>
+
+<router-link to="/">
+<button class="btn" style="background: #626262; color: white;">Sign in</button>
+</router-link>
+
+</div>
+</div>
+
+
 </main>
   </div>
 </template>
@@ -18,25 +34,7 @@
   }
 </script>
 
-<style>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  a, router-link{
-    color: inherit;
-    text-decoration: none;
-  }
-
-  body{
-  font-family: 'Montserrat';
-}
-
+<style scoped>
 
   /*Main*/
   .main{

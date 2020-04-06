@@ -28,14 +28,14 @@
     <main class="main">
     <h1>Dashboard</h1>
 
-    <div class="article_showcase lg_8" >
+    <div class="article_showcase lg_12" >
         <h4>Environment communities</h4>
     </div>
 
 
     <div class="article_showcase lg_4" >
       <h4>Environment communities</h4>
-  </div><!--
+  </div><div class="lg_4" ></div><!--
 
 
   --><div class="article_showcase lg_4" >
@@ -61,16 +61,6 @@
 </script>
 
 <style>
-  @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body { font-family: 'Montserrat', sans-serif; }
-
  
 
 /*Sidebar*/
@@ -89,29 +79,7 @@ color: rgba(255, 255, 255, 0.7);
   }
 
 
-  input.search{
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid white;
-    border-radius: 4px;
-    width: 80%;
-    margin: auto;
-    position: relative;
-    height: 15pt;
-    text-align: center;
-    color: white;
-    /*outline: rgb(28, 135, 251)*/
-  }
 
-input.search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: white;
-  opacity: 0.9; /* Firefox */
-}
-
-
-input.search:focus::-webkit-input-placeholder 
-{
-    color: transparent;
-}
 
 
   .sidebar ul{
@@ -190,21 +158,6 @@ input.search:focus::-webkit-input-placeholder
  color: black;
 }
 
-.lg_8{
-  width: 100%;
-  height: 30vh;
-  position: relative;
-  margin-top: 5px;
-  margin-bottom: 5Px;
-}
-
-.lg_4{
-  margin: 5px;
-  width: calc(50% - 10px);
-  height: 30vh;
-  position: relative;
-  display: inline-block;
-}
 
 
 </style>
