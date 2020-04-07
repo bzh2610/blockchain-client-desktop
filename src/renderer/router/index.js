@@ -21,6 +21,16 @@ export default new Router({
       component: require('@/components/0_welcome').default
     },
     {
+      path: '/signup',
+      name: 'signup-1',
+      component: require('@/components/1_signup_identification').default
+    },
+    {
+      path: '/signin',
+      name: '1_signin',
+      component: require('@/components/1_signin').default
+    },
+    {
       path: '*',
       redirect: '/'
     }

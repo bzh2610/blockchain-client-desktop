@@ -16,22 +16,23 @@
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
   * {
+    font-family: 'Montserrat';
     box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
 
     a, router-link{
-    color: inherit;
-    text-decoration: none;
+    color: inherit !important;
+    text-decoration: none !important;
   }
 
-  body { font-family: 'Montserrat', sans-serif; }
+  body { font-family: 'Montserrat', sans-serif; background: transparent !important; }
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 
 
-/* Homemade bootstrap */
+/* Homemade bootstrap 
 
 
   .col-lg-12, .lg_12{
@@ -75,7 +76,10 @@
   position: relative;
   display: inline-block;
 }
-
+*/
+.margin_20{
+  margin: 20px;
+}
 
 /* Elements */
 
@@ -92,6 +96,7 @@
       height: 15pt;
       text-align: center;
       color: white;
+      font-size: 10pt;
       /*outline: rgb(28, 135, 251)*/
     }
     input.search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */

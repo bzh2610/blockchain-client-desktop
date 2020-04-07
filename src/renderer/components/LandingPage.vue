@@ -7,7 +7,7 @@
           </li>
         <li> </li>
         <li>
-          <input class="search" type="text" placeholder="Search...">
+          <input class="search" type="text" placeholder=" Search...">
         </li>
         <li class="selected">
           <i>􀋃</i> Home
@@ -28,20 +28,24 @@
     <main class="main">
     <h1>Dashboard</h1>
 
-    <div class="article_showcase lg_12" >
+<div class="row">
+    <div class="article_showcase col col-lg-12"
+          style="min-height: 150px;" >
         <h4>Environment communities</h4>
     </div>
+</div>
 
-
-    <div class="article_showcase lg_4" >
+<div class="row" style="padding-top: 25px;">
+    <div class="article_showcase col col-md-5" >
       <h4>Environment communities</h4>
-  </div><div class="lg_4" ></div><!--
-
-
-  --><div class="article_showcase lg_4" >
+  </div>
+  
+  <div class="article_showcase col col-md-5 offset-md-2" >
     <h4>Environment communities</h4>
 </div>
    
+</div>
+
 </main>
   </div>
 </template>
@@ -145,6 +149,8 @@ color: rgba(255, 255, 255, 0.7);
 
 .article_showcase{
   border-radius: 20px;
+  height: calc(100vw / 5);
+  min-height: 200px;
   background: url('../assets/showcase/environment.png') center/cover;
 }
 

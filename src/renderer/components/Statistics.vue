@@ -18,7 +18,7 @@
         
           <i>􀜋</i>  Statistics </li>
 
-        <li><i>􀍟</i>  Settings</li>
+        <li><i> <font-awesome-icon icon="user-secret"/></i>  Settings</li>
       </ul>
     </div>
 

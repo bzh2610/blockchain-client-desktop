@@ -4,20 +4,25 @@
 
     <main class="main">
    
+   <header>
+
    <p class="logo_line">
-<img class="block" src="../assets/icons/logo.svg" alt="Block logo"><img src="../assets/icons/votechain.svg" class="votechain" alt="Votechain">
+<img class="block" src="../assets/icons/logo.svg" alt="Block logo">
+Request access to the platform
 </p>
+
+   </header>
 
 <div class="row">
 <div class="col-lg-2"></div>
 <div class="col-lg-8 spacer" style="text-align: center;">
 
-<router-link to="/signup">
-<button class="btn gradient_OP margin_20">Sign up</button>
+<router-link to="/">
+<button class="btn gradient_OP margin_20">Next</button>
 </router-link>
 
 <router-link to="/">
-<button class="btn margin_20" style="background: #626262; color: white;">Sign in</button>
+<button class="btn margin_20" style="background: #626262; color: white;">Cancel</button>
 </router-link>
 
 </div>
@@ -30,7 +35,7 @@
 
 <script>
   export default {
-    name: 'welcome'
+    name: 'signup-1'
   }
 </script>
 
@@ -49,11 +54,17 @@
 }
 
 .logo_line{
-  margin-top: 10%;
- text-align: center; line-height: 100px; height: 100px;
+  margin-top: 0px;
+  padding-left: 50px; 
+ text-align: left;
+ line-height: 50px;
+ height: 50px;
+ font-size: 25pt;
+ background: rgb(32,32,32);
+ width: 100%;
 }
 .block{
-  height: 100px;
+  height: 50px;
   vertical-align: middle;
 }
 .votechain{

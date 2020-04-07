@@ -12,7 +12,7 @@
 <div class="col-lg-2"></div>
 <div class="col-lg-8 spacer" style="text-align: center;">
 
-<router-link to="/signup">
+<router-link to="/">
 <button class="btn gradient_OP margin_20">Sign up</button>
 </router-link>
 
@@ -30,7 +30,7 @@
 
 <script>
   export default {
-    name: 'welcome'
+    name: '1_signin'
   }
 </script>
 
