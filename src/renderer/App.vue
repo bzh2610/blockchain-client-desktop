@@ -23,6 +23,7 @@
   }
 
     a, router-link{
+      outline: none;
     color: inherit !important;
     text-decoration: none !important;
   }

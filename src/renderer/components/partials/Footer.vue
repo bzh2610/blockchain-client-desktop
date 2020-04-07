@@ -1,9 +1,15 @@
 <template>
   <div class="footer draggable">
-    
+    <hr/>
+    <h4>Shortcuts</h4>
+    <p>
+      <span class="outer-link" v-on:click="open('http://google.com/')"> Homepage </span>
+    </p>
+    <p style="font-size: 8pt;">
+      Votechain, a blockchain voting system by Vlad Gheorghiu, Sander Hitz, Evan Ollivier &amp; Thomas Post
+    </p>
   </div>
 </template>
-
 
 
 <script>
@@ -14,7 +20,9 @@ export default {
     }
   },
   methods: {
-
+    open (link) {
+      this.$electron.shell.openExternal(link)
+    }
   }
 }
 </script>
@@ -29,6 +37,13 @@ export default {
   max-height: 200px;
 }
 
+
+.outer-link{
+  font-size: 15pt;
+  color: rgb(28, 131, 243);
+  font-weight: 500;
+  cursor: pointer;
+}
 
 </style>
 
