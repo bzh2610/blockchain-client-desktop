@@ -74,9 +74,6 @@ export default {
   name: 'landing-page',
   components: { Sidebar, Footer },
   methods: {
-    open (link) {
-      this.$electron.shell.openExternal(link)
-    }
   }
 }
 </script>

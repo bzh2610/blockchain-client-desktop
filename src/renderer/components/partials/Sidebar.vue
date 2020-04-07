@@ -5,21 +5,19 @@
       <li style="padding: 20px 0px 20px 0px; text-align: center;">
         <input class="search fa" type="text" :placeholder="search" />
       </li>
-      <router-link to="/" v-on:click.native="changeTab(1)">
-        <li
-            v-bind:class="{ 'selected': (selected_item === 1) }">
+      <router-link v-on:click.native="changeTab(1)" to="/">
+        <li v-on:click="changeTab(1)"
+            v-bind:class="{ selected: (selected_item === 1) }">
         <i>
           <font-awesome-icon icon="columns" />
         </i> Dashboard
       </li>
       </router-link>
 
-
-
-
       
-      <router-link to="/statistics" v-on:click.native="changeTab(2)">
-        <li v-bind:class="{ 'selected': (selected_item === 2) }">
+      <router-link v-on:click.native="changeTab(2)" to="/votes">
+        <li v-on:click="changeTab(2)"
+            v-bind:class="{ selected: (selected_item === 2) }">
         <i>
           <font-awesome-icon icon="vote-yea" />
         </i> Votes
@@ -27,16 +25,18 @@
       </router-link>
       
       
-      <router-link to="/statistics" v-on:click.native="changeTab(3)" tabindex="3">
-        <li v-bind:class="{ 'selected': (selected_item === 3) }">
+      <router-link v-on:click.native="changeTab(3)" to="/communities" >
+        <li  v-on:click="changeTab(3)" 
+             v-bind:class="{ selected: (selected_item === 3) }">
         <i>
           <font-awesome-icon icon="user-friends" />
         </i> Communities
       </li>
       </router-link>
 
-      <router-link to="/statistics" v-on:click.native="changeTab(4)" tabindex="4">
-        <li v-bind:class="{ 'selected': (selected_item === 4) }">
+      <router-link v-on:click.native="changeTab(4)" to="/statistics" >
+        <li v-on:click="changeTab(4)" 
+            v-bind:class="{ selected: (selected_item === 4) }">
           <i>
             <font-awesome-icon icon="chart-bar" />
           </i>
@@ -69,12 +69,14 @@ export default {
   data: function () {
     return {
       search: 'Search',
-      selected_item: 1
+      selected_item: this.$parent.$parent.selected_item
     }
   },
   methods: {
-    changeTab (val) {
-      this.selected_item = val
+    changeTab (value) {
+      // debugger
+      this.selected_item = value
+      this.$parent.$parent.selected_item = value
     }
   }
 }

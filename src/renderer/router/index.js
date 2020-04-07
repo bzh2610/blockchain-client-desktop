@@ -21,6 +21,16 @@ export default new Router({
       component: require('@/components/0_welcome').default
     },
     {
+      path: '/votes',
+      name: 'Votes',
+      component: require('@/components/Votes').default
+    },
+    {
+      path: '/communities',
+      name: 'Communities',
+      component: require('@/components/Communities').default
+    },
+    {
       path: '/signup',
       name: 'signup-1',
       component: require('@/components/1_signup_identification').default

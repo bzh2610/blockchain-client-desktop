@@ -6,7 +6,12 @@
 
 <script>
   export default {
-    name: 'vue-electron'
+    name: 'vue-electron',
+    data: function () {
+      return {
+        selected_item: 1
+      }
+    }
   }
 </script>
 
