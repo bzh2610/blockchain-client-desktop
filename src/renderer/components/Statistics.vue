@@ -23,7 +23,7 @@
       </div>
       </div>
 
-     
+       <Footer></Footer>
     </main>
   </div>
 </template>
@@ -32,6 +32,7 @@
 /* eslint-disable */
 import VueApexCharts from 'vue-apexcharts'
 import Sidebar from './partials/Sidebar'
+import Footer from './partials/Footer'
 
 export default {
   name: "statistics",
@@ -41,7 +42,7 @@ export default {
     }
   },
   components: {
-    Sidebar,
+    Sidebar, Footer,
     'apexchart': VueApexCharts
   },
   methods: {
@@ -278,31 +279,4 @@ data () {
 }
 
 
-/*Main*/
-.main {
-  background: rgb(32, 32, 32);
-  width: 200%;
-  display: inline-block;
-  min-height: 100%;
-  height: auto;
-  position: absolute;
-  top: 0px;
-  left: 200px;
-  padding: 0px 5% 0px 5%;
-  color: white;
-}
-
-.article_showcase {
-  border-radius: 20px;
-}
-
-.article_showcase h4 {
-  margin-left: 20px;
-  margin-top: 20px;
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-size: 16pt;
-  color: white;
-  background: black;
-}
 </style>

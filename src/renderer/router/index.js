@@ -13,7 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'landing-page',
-      component: require('@/components/LandingPage').default
+      component: require('@/components/Dashboard').default
     },
     {
       path: '/welcome',

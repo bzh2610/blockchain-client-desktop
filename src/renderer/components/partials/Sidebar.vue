@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <div class="sidebar draggable">
     <ul>
       <li></li>
       <li style="padding: 20px 0px 20px 0px; text-align: center;">
@@ -10,7 +10,7 @@
             v-bind:class="{ 'selected': (selected_item === 1) }">
         <i>
           <font-awesome-icon icon="columns" />
-        </i> Home
+        </i> Dashboard
       </li>
       </router-link>
 
@@ -84,7 +84,6 @@ export default {
 <style scoped>
 /*Sidebar*/
 .sidebar {
-  font-family: "SF Pro Display";
   background: rgba(0, 0, 0, 0.7);
   width: 200px;
   display: inline-block;
@@ -106,11 +105,13 @@ export default {
 
 .sidebar ul li {
   padding-left: 20px;
-  font-family: "SF Pro Rounded";
   list-style: none;
   line-height: 30pt;
   vertical-align: middle;
   cursor: pointer;
+  font-family: "Helvetica Neue";
+  font-size: 14pt;
+  font-weight: 500;
 }
 
 .sidebar ul li:hover {

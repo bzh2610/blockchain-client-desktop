@@ -35,6 +35,12 @@
   margin: 20px;
 }
 
+/* System */
+
+.draggable {
+    -webkit-app-region: drag;
+}
+
 /* Elements */
 
 
