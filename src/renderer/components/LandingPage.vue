@@ -3,7 +3,7 @@
         <div class="sidebar">
       <ul>
         <li class="icon_container">
-          <img src="../assets/icons/logo_text@3x.png" class="logo">
+          <img src="../assets/block.png" class="logo">
           </li>
         <li> </li>
         <li>
@@ -69,7 +69,7 @@
 
 /*Sidebar*/
 .sidebar{
-    background: transparent;
+    background: rgba(0,0,0,0.3);
     width: 200px;
 display: inline-block;
 height: 100%;
@@ -116,7 +116,8 @@ color: rgba(255, 255, 255, 0.7);
   }
 
   .logo{
-    width: 70%;
+    width: 40px;
+    max-width: 50%;
     height: auto;
     padding-top: 5px;
     margin-left: -10%;
