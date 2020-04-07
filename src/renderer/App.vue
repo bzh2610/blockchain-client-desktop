@@ -31,52 +31,6 @@
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
 
-
-/* Homemade bootstrap 
-
-
-  .col-lg-12, .lg_12{
-  display: inline-block;
-  width: 100%;
-  height: 30vh;
-  position: relative;
-  margin-top: 5px;
-  margin-bottom: 5Px;
-}
-
-  .col-lg-8, .lg_8{
-  display: inline-block;
-  width: 66.66%;
-  height: 30vh;
-  position: relative;
-  margin-top: 5px;
-  margin-bottom: 5Px;
-}
-
-.col-lg-6, .lg_6{
-  margin: 0px;
-  width: 50%;
-  height: 30vh;
-  position: relative;
-  display: inline-block;
-}
-
-.col-lg-4, .lg_4{
-  margin: 0px;
-  width: 33.33%;
-  height: 30vh;
-  position: relative;
-  display: inline-block;
-}
-
-.col-lg-2, .lg_2{
-  margin: 0px;
-  width: 16.66%;
-  height: 30vh;
-  position: relative;
-  display: inline-block;
-}
-*/
 .margin_20{
   margin: 20px;
 }
@@ -89,13 +43,14 @@
     input.search{
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid white;
-      border-radius: 4px;
+      border-radius: 5px;
       width: 80%;
       margin: auto;
       position: relative;
-      height: 15pt;
+      height: 20pt;
       text-align: center;
       color: white;
+      opacity: 0.5;
       font-size: 10pt;
       /*outline: rgb(28, 135, 251)*/
     }

@@ -1,36 +1,6 @@
 <template>
   <div id="wrapper">
-    <div class="sidebar">
-      <ul>
-        <li class="icon_container">
-          <img src="../assets/block.png" class="logo" />
-        </li>
-        <li></li>
-        <li>
-          <input class="search" type="text" placeholder="Search..." />
-        </li>
-        <router-link to="/">
-          <li>
-            <i>􀋃</i> Home
-          </li>
-        </router-link>
-        <li>
-          <i>􀍖</i> Votes
-        </li>
-        <li>
-          <i>􀝋</i> Communities
-        </li>
-        <li class="selected">
-          <i>􀜋</i> Statistics
-        </li>
-
-        <li>
-          <i>
-            <font-awesome-icon icon="user-secret" />
-          </i> Settings
-        </li>
-      </ul>
-    </div>
+    <sidebar></sidebar>
 
     <main class="main">
       <h1>Statistics</h1>
@@ -57,6 +27,7 @@
 <script>
 /* eslint-disable */
 import VueApexCharts from 'vue-apexcharts'
+import Sidebar from './partials/Sidebar'
 
 export default {
   name: "statistics",
@@ -66,6 +37,7 @@ export default {
     }
   },
   components: {
+    Sidebar,
     'apexchart': VueApexCharts
   },
 data () {
@@ -151,14 +123,6 @@ data () {
   width: calc(90vw - 200px);
 }
 
-
-i {
-  width: 50px;
-  display: inline-block;
-  font-style: normal;
-  text-align: center;
-  margin-left: -10px;
-}
 
 /*Main*/
 .main {
