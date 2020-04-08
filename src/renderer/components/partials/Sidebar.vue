@@ -43,9 +43,11 @@
           Statistics
         </li>
       </router-link>
+       <router-link v-on:click.native="changeTab(5)" to="/settings" >
       <li>
         <i>􀍟</i> Settings
       </li>
+       </router-link>
       <router-link to="/welcome">
         <li>
           <i>
@@ -54,9 +56,11 @@
         </li>
       </router-link>
 
+ <router-link v-on:click.native="changeTab(6)" to="/profile" >
       <li class="user_tab">
         <img src="../../assets/icons/1.png" style="width: 40px;" /> John Doe
       </li>
+ </router-link>
     </ul>
   </div>
 </template>

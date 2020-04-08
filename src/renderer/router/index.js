@@ -31,6 +31,16 @@ export default new Router({
       component: require('@/components/Communities').default
     },
     {
+      path: '/profile',
+      name: 'Profile',
+      component: require('@/components/Profile').default
+    },
+    {
+      path: '/settings',
+      name: 'Settings',
+      component: require('@/components/Settings').default
+    },
+    {
       path: '/signup',
       name: 'signup-1',
       component: require('@/components/1_signup_identification').default
