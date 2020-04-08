@@ -16,12 +16,51 @@ Request access to the platform
 <div class="row">
 <div class="col-lg-2"></div>
 <div class="col-lg-8 spacer" style="text-align: center;">
+  <div style="padding-top: 50px; text-align: left;">
+                      <input
+                        id="firstname"
+                        type="text"
+                        style="margin: auto; display: block;"
+                        placeholder="John"
+                      />
+                      <label for="firstname">Your firstname :</label>
+                    </div>
+
+                      <div style="padding-top: 10px; text-align: left;">
+                      <input
+                        id="lastname"
+                        type="text"
+                        style="margin: auto; display: block;"
+                        placeholder="Doe"
+                      />
+                      <label for="lastname">Your lastname :</label>
+                    </div>
+
+                      <div style="padding-top: 10px; text-align: left;">
+                      <input
+                        id="email"
+                        type="text"
+                        style="margin: auto; display: block;"
+                        placeholder="john.doe@mail.org"
+                      />
+                      <label for="email">Your email :</label>
+                    </div>
+
+                      <div style="padding-top: 10px; text-align: left;">
+                      <input
+                        id="BSN"
+                        type="text"
+                        style="margin: auto; display: block;"
+                        placeholder="123456789"
+                      />
+                      <label for="BSN">Your Citizen Service Number :</label>
+                    </div>
 
 <router-link to="/">
 <button class="btn gradient_OP margin_20">Next</button>
 </router-link>
 
-<router-link to="/">
+<router-link to="/welcome">
 <button class="btn margin_20" style="background: #626262; color: white;">Cancel</button>
 </router-link>
 
@@ -41,16 +80,29 @@ Request access to the platform
 
 <style scoped>
 
+
+
   /*Main*/
   .main{
-    background: rgb(32, 32, 32) url('../assets/screens/0_welcome/geometry.svg') center/120%;
+    background: rgb(32, 32, 32);
     width: 100%;
     height: 100%;
     top: 0px;
     left: 0px;
     padding: 0px 5% 0px 5%;
     color: white;
+}
 
+.main:before {
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../assets/screens/0_welcome/geometry.svg') center/120%;
+    width: 100%;
+    height: 100%;
+    opacity : 0.5;
 }
 
 .logo_line{

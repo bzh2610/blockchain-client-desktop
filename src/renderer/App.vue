@@ -49,6 +49,35 @@
 
 /* Elements */
 
+    /* Inputs Text, passwords, number, emails */
+    input[type=text], input[type=email], input[type=password], input[type=number]{
+        background: transparent;
+      width: 80%;
+      font-size: 15pt;
+      border: none;
+      border-bottom: 2px solid rgba(255,255,255,0.7);
+      outline: none;
+      color: white;
+      }
+
+      input:focus+label{
+        color: #b480fa !important;
+        font-weight: 500;
+      }
+
+      input:focus{
+        border-bottom: 2px solid #b480fa;
+      }
+
+
+      input[type=email]+label, input[type=text]+label, input[type=password]+label, input[type=number]+label{
+        display: inline-block;
+      margin-left: 10%;
+      position: relative;
+      top: -55pt;
+      padding-top: 20px;
+      color: white;
+      }
 
    /* Search */
 
