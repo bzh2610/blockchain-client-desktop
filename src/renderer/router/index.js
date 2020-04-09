@@ -42,8 +42,23 @@ export default new Router({
     },
     {
       path: '/signup',
-      name: 'signup-1',
-      component: require('@/components/1_signup_identification').default
+      name: 'signup-identification',
+      component: require('@/components/signup/1_identification').default
+    },
+    {
+      path: '/signup-address',
+      name: 'signup-address',
+      component: require('@/components/signup/2_address').default
+    },
+    {
+      path: '/signup-recap',
+      name: 'signup-recap',
+      component: require('@/components/signup/3_recap').default
+    },
+    {
+      path: '/signup-finished',
+      name: 'signup-finished',
+      component: require('@/components/signup/4_finished').default
     },
     {
       path: '/signin',

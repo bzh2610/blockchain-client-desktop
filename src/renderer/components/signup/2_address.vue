@@ -7,7 +7,7 @@
    <header>
 
    <p class="logo_line">
-<img class="block" src="../assets/icons/logo.svg" alt="Block logo">
+<img class="block" src="/src/renderer/assets/icons/logo.svg" alt="Block logo">
 Request access to the platform
 </p>
 
@@ -18,49 +18,49 @@ Request access to the platform
 <div class="col-lg-8 spacer" style="text-align: center;">
   <div style="padding-top: 50px; text-align: left;">
                       <input
-                        id="firstname"
+                        id="street"
                         type="text"
                         style="margin: auto; display: block;"
-                        placeholder="John"
+                        placeholder="Kastanjelaan 15"
                       />
-                      <label for="firstname">Your firstname :</label>
+                      <label for="street">Street address:</label>
                     </div>
 
                       <div style="padding-top: 10px; text-align: left;">
                       <input
-                        id="lastname"
+                        id="opt"
                         type="text"
                         style="margin: auto; display: block;"
-                        placeholder="Doe"
+                        placeholder="Apt 32"
                       />
-                      <label for="lastname">Your lastname :</label>
+                      <label for="opt">Appartment, Floor :</label>
                     </div>
 
                       <div style="padding-top: 10px; text-align: left;">
                       <input
-                        id="email"
+                        id="postcode"
                         type="text"
                         style="margin: auto; display: block;"
-                        placeholder="john.doe@mail.org"
+                        placeholder="5616LH"
                       />
-                      <label for="email">Your email :</label>
+                      <label for="postcode">Postcode :</label>
                     </div>
 
                       <div style="padding-top: 10px; text-align: left;">
                       <input
-                        id="BSN"
+                        id="city"
                         type="text"
                         style="margin: auto; display: block;"
-                        placeholder="123456789"
+                        placeholder="Eindhoven"
                       />
-                      <label for="BSN">Your Citizen Service Number :</label>
+                      <label for="city">City :</label>
                     </div>
 
-<router-link to="/">
+<router-link to="/signup-recap">
 <button class="btn gradient_OP margin_20">Next</button>
 </router-link>
 
-<router-link to="/welcome">
+<router-link to="/signup">
 <button class="btn margin_20" style="background: #626262; color: white;">Cancel</button>
 </router-link>
 
@@ -74,7 +74,7 @@ Request access to the platform
 
 <script>
   export default {
-    name: 'signup-1'
+    name: 'signup-address'
   }
 </script>
 
@@ -99,7 +99,7 @@ Request access to the platform
     position: absolute;
     top: 0;
     left: 0;
-    background: url('../assets/screens/0_welcome/geometry.svg') center/120%;
+    background: url('/src/renderer/assets/screens/0_welcome/geometry.svg') center/120%;
     width: 100%;
     height: 100%;
     opacity : 0.5;
