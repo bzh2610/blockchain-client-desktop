@@ -5,7 +5,6 @@
     <main class="main">
       <h1>Profile</h1>
 
-
       <Footer></Footer>
     </main>
   </div>

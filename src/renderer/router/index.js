@@ -16,6 +16,11 @@ export default new Router({
       component: require('@/components/Dashboard').default
     },
     {
+      path: '/article',
+      name: 'article',
+      component: require('@/components/Article').default
+    },
+    {
       path: '/welcome',
       name: 'welcome',
       component: require('@/components/0_welcome').default

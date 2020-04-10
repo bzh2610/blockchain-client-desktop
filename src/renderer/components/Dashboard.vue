@@ -6,9 +6,11 @@
       <h1>Dashboard</h1>
 
       <div class="row">
-        <div class="article_showcase col col-lg-12" style="min-height: 150px;">
+      
+        <div class="article_showcase col col-lg-12" style="min-height: 150px;" v-on:click="push('article')">
           <h4>Environment communities</h4>
         </div>
+     
       </div>
 
       <div class="row" style="padding-top: 25px;">
@@ -74,6 +76,9 @@ export default {
   name: 'landing-page',
   components: { Sidebar, Footer },
   methods: {
+    push (url) {
+      this.$router.push({ name: url })
+    }
   }
 }
 </script>
@@ -104,6 +109,7 @@ export default {
   border-radius: 20px;
   height: calc(100vw / 5);
   min-height: 200px;
+  transition: 1s;
   background: url("../assets/showcase/environment.png") center/cover;
 }
 
