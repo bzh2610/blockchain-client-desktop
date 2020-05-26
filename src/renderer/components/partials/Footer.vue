@@ -35,6 +35,7 @@ export default {
   display: block;
   min-height: 20vh;
   max-height: 200px;
+  background: transparent;
 }
 
 
