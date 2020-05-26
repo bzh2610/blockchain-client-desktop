@@ -19,8 +19,6 @@
   /* CSS */
 
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-  @import url('https://cdn.materialdesignicons.com/2.5.94/css/materialdesignicons.min.css');
-  @import url('https://use.fontawesome.com/releases/v5.2.0/css/all.css');
 
 /* montserrat-100 - latin-ext_latin */
 @font-face {

@@ -65,7 +65,6 @@
     "axios": "^0.18.0",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.10.1",
-    "buefy": "^0.8.19",
     "electron-localshortcut": "3.1.0",
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.5.3",
