@@ -6,69 +6,81 @@ Vue.use(Router)
 export default new Router({
   routes: [
     {
-      path: '/statistics',
-      name: 'landing-page',
-      component: require('@/components/Statistics').default
-    },
-    {
       path: '/',
       name: 'landing-page',
-      component: require('@/components/Dashboard').default
+      component: require('@/views/Dashboard').default
+    },
+    /*
+    // Example of component template
+    {
+      path: '/home/',
+      component: require('@/components/templates/default').default,
+      children: [
+        {
+          path: 'statistics',
+          component: require('@/views/Statistics').default
+        }
+      ]
+    },*/
+    {
+      path: '/statistics',
+      name: 'statistics',
+      component: require('@/views/Statistics').default
     },
     {
       path: '/article',
       name: 'article',
-      component: require('@/components/Article').default
+      component: require('@/views/Article').default
     },
     {
       path: '/welcome',
       name: 'welcome',
-      component: require('@/components/0_welcome').default
+      component: require('@/views/0_welcome').default
     },
     {
       path: '/votes',
       name: 'Votes',
-      component: require('@/components/Votes').default
+      component: require('@/views/Votes').default
     },
     {
       path: '/communities',
       name: 'Communities',
-      component: require('@/components/Communities').default
+      component: require('@/views/Communities').default
     },
     {
       path: '/profile',
       name: 'Profile',
-      component: require('@/components/Profile').default
+      component: require('@/views/Profile').default
     },
     {
       path: '/settings',
       name: 'Settings',
-      component: require('@/components/Settings').default
+      component: require('@/views/Settings').default
     },
     {
       path: '/signup',
       name: 'signup-identification',
-      component: require('@/components/signup/1_identification').default
+      component: require('@/views/signup/1_identification').default
     },
     {
       path: '/signup-address',
       name: 'signup-address',
-      component: require('@/components/signup/2_address').default
+      component: require('@/views/signup/2_address').default
     },
     {
       path: '/signup-recap',
       name: 'signup-recap',
-      component: require('@/components/signup/3_recap').default
+      component: require('@/views/signup/3_recap').default
     },
     {
       path: '/signup-finished',
       name: 'signup-finished',
-      component: require('@/components/signup/4_finished').default
+      component: require('@/views/signup/4_finished').default
     },
     {
       path: '/signin',
       name: '1_signin',
-      component: require('@/components/1_signin').default
+      component: require('@/views/1_signin').default
     },
     {
       path: '*',

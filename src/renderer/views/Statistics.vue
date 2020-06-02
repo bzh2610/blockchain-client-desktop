@@ -31,8 +31,8 @@
 <script>
 /* eslint-disable */
 import VueApexCharts from "vue-apexcharts";
-import Sidebar from "./partials/Sidebar";
-import Footer from "./partials/Footer";
+import Sidebar from "@/components/partials/Sidebar";
+import Footer from "@/components/partials/Footer";
 
 export default {
   name: "statistics",
