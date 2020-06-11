@@ -66,6 +66,7 @@
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.10.1",
     "electron-localshortcut": "3.1.0",
+    "less-loader": "^6.1.0",
     "vue": "^2.6.11",
     "vue-apexcharts": "^1.5.3",
     "vue-electron": "^1.0.6",

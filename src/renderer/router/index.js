@@ -28,6 +28,16 @@ export default new Router({
       component: require('@/views/Statistics').default
     },
     {
+      path: '/community',
+      name: 'community',
+      component: require('@/views/Community/index').default
+    },
+    {
+      path: '/community/admin',
+      name: 'communityAdmin',
+      component: require('@/views/Community/administrators').default
+    },
+    {
       path: '/article',
       name: 'article',
       component: require('@/views/Article').default

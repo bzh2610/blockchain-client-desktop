@@ -7,7 +7,7 @@
 
 
   <div class="row">
-        <div class="article_showcase col col-lg-12" style="min-height: 150px;">
+        <div class="article_showcase col col-lg-12" style="min-height: 150px;" v-on:click="push('community')">
           <h4>Environment communities</h4>
         </div>
       </div>
@@ -38,7 +38,11 @@ import Footer from '@/components/partials/Footer'
 
 export default {
   name: 'Communities',
-  methods: {},
+  methods: {
+    push (url) {
+      this.$router.push({ name: url })
+    }
+  },
   components: {
     Sidebar,
     Footer
