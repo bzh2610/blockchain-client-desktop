@@ -38,6 +38,11 @@ export default new Router({
       component: require('@/views/Community/administrators').default
     },
     {
+      path: '/community/about',
+      name: 'communityAbout',
+      component: require('@/views/Community/about').default
+    },
+    {
       path: '/article',
       name: 'article',
       component: require('@/views/Article').default

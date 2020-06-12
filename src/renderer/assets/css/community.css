@@ -1,0 +1,61 @@
+.avatar {
+    width: 50px;
+    border-radius: 50%;
+}
+
+/* */
+
+.pagination .page-item {
+    margin: 5px;
+    border-radius: 50%;
+    background: #f7fafc;
+    width: 40px;
+    height: 40px;
+    color: black;
+    box-shadow: 5px 5px 8px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.pagination .page-item a {
+    background: none;
+    border: none;
+}
+
+.pagination .page-item.active {
+    background: #4d7bca;
+    color: white;
+    border: none;
+}
+
+/* */
+
+.content.dark {
+    color: white;
+    background: #172b4d;
+}
+.content {
+    background: rgb(247, 250, 252);
+    border-radius: 20px;
+    margin: 20px;
+    width: 100%;
+    box-shadow: 0 0 2rem 0 rgba(136, 152, 170, 0.15) !important;
+    display: inline-block;
+    color: black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.bg-secondary {
+    background: #f7fafc !important;
+}
+
+.article_showcase {
+    height: 30vh;
+    border-radius: 0 0 0px 0px;
+    background: linear-gradient(90deg, rgb(233, 182, 16), rgb(245, 131, 203));
+}
+
+.main {
+    padding: 0px;
+    overflow-x: hidden;
+}
