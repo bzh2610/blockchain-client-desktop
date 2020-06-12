@@ -65,7 +65,7 @@
         <CommunitySidebar></CommunitySidebar>
       </div>
 
-      <Footer></Footer>
+ <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
     </main>
   </div>
 </template>

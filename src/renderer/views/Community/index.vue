@@ -31,7 +31,28 @@
                 style="display: inline-block; width: calc(90%); padding: 25px; top: 0px;"
               >
                 <small>{{ (Math.random()*0xFFFFFF<<0).toString(16) }}</small>
-                <br />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel ex dolor. Aliquam ut nisi viverra purus condimentum tempor at vulputate justo. Mauris eu condimentum mi. Fusce non magna ligula. Phasellus luctus fringilla quam, eu ultrices dolor rutrum posuere. Phasellus imperdiet aliquet dignissim.
+                <br />
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                 Morbi vel ex dolor. Aliquam ut nisi viverra purus condimentum tempor
+                 at vulputate justo. Mauris eu condimentum mi. Fusce non magna ligula.
+                 Phasellus luctus fringilla quam, eu ultrices dolor rutrum posuere.
+                 Phasellus imperdiet aliquet dignissim.
+                </p>
+              <div class="actions" style="margin-top: 5pt; float: left; display: inline-block;">
+              <table>
+                <tr>
+ <td>             <font-awesome-icon icon="thumbs-up" size="sm" class="thumbs-up"/>
+     </td><td>         <font-awesome-icon icon="thumbs-down" size="sm" class="thumbs-down" />
+ </td><td><font-awesome-icon icon="comments" size="sm" class="comments" />
+ </td><td><font-awesome-icon icon="share" size="sm" class="share" />
+ </td></tr><tr>
+   <td>265</td>
+   <td>12</td>
+   <td>102</td>
+   <td>43</td>
+   </tr>
+ </table>
+              </div>
               </div>
             </div>
 
@@ -67,7 +88,7 @@
         <CommunitySidebar></CommunitySidebar>
       </div>
 
-      <Footer></Footer>
+      <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
     </main>
   </div>
 </template>
@@ -83,4 +104,33 @@ export default {
   methods: {}
 };
 </script>
+<style scoped lang="less">
+.main{
+   background: linear-gradient(90deg, rgb(233, 182, 16), rgb(245, 131, 203)) !important;
+}
+.actions{
+  .thumbs-up:hover{
+    color: rgb(224, 63, 144);
+  }
+  .thumbs-down:hover{
+    color: rgb(255, 145, 0)
+  }
+  .comments:hover{
+    color: rgb(63, 201, 189);
+  }
+  .share:hover{
+    color: rgb(93, 71, 192);
+  }
+}
+
+.actions td{
+  padding: 0px 15px 0px 15px;
+  border: none;
+}
+.actions .thumbs-up, .actions .thumbs-down, .actions .comments, .actions .share{
+  cursor: pointer;
+  color: lightgrey;
+}
+
+</style>
 <style scoped src="@/assets/css/community.css"></style>

@@ -19,7 +19,7 @@
               v-for="i in 10"
               v-bind:key="i"
             >
-              <div style="width: calc(10% - 5px); display: inline-block; vertical-align: top;">
+              <div style="width: calc(10% - 5px); display: inline-block; vertical-align: top">
                 <img
                   style="margin-left: -50%; margin-top: 45%;"
                   class="avatar"
@@ -67,7 +67,7 @@
         <CommunitySidebar></CommunitySidebar>
       </div>
 
-      <Footer></Footer>
+       <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
     </main>
   </div>
 </template>

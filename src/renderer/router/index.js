@@ -43,6 +43,11 @@ export default new Router({
       component: require('@/views/Community/about').default
     },
     {
+      path: '/community/polls',
+      name: 'communityPolls',
+      component: require('@/views/Community/polls').default
+    },
+    {
       path: '/article',
       name: 'article',
       component: require('@/views/Article').default
