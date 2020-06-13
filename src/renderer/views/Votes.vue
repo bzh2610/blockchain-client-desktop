@@ -2,55 +2,130 @@
   <div id="wrapper">
     <sidebar></sidebar>
 
-    <main class="main">
-      <h1>Votes</h1>
+    <main class="main" style="background: rgb(243,245,250)"
+     :style="{background: 'url(https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)+') center / 160%'}"
+>
+      <div class="row">
+        <div class="article_showcase col col-lg-12" style="min-height: 50px; background: transparent;"></div>
+      </div>
 
-  <div class="row">
-    <div class="col-md-5" style="color: black; background: linear-gradient(45deg, #EC42FA, #6EC6E9); border-radius: 20px; padding: 10px;">
-      <h5 style="font-size: 14pt;">Eindhoven municipality, 12 hours left</h5>
-      <hr>
-      <p style="text-align: center">
-        Would you have 2H next week to share about your professional background with high school students ?
-      </p>
+      <div class="row" style="position: relative; top: -20vh; padding: 20px;">
+        <div class="col col-lg-10 mx-auto" style="min-height: 50px;" >
+          <div class="content"  >
+            <div class="content-header" style="padding: 10px; padding-left: 20px;">
+              <span>Polls</span>
+            </div>
 
-      <button class="btn  margin_20">Yes</button>
-      <button class="btn  margin_20">No</button>
-    </div>
+            <div
+              style=" background: white; width: 80%; box-shadow: 0 0 12pt 0 rgba(136, 152, 170, 0.15) !important; margin: 30pt auto 30pt auto;"
+              v-for="(item, index) in polls"
+              v-bind:key="'question_'+index">
+              <div style="width: calc(10% - 5px); display: inline-block; vertical-align: top;">
+                <img
+                  style="margin-left: -50%; margin-top: 45%;"
+                  class="avatar"
+                  :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)"
+                />
+              </div>
+              <div
+                class="post-content"
+                style="display: inline-block; width: calc(90%); padding: 25px; top: 0px;"
+              >
+                <large>{{ item.communityName }}</large>
+                <small>12 h left</small>
+                <br />
+                <p>
+            {{ item.question }}
+                </p>
+               <ButtonRadio
+                style="margin-top: 25px"
+                :name="item.name"
+                theme="fire"
+                :options="item.answers"
+              ></ButtonRadio>
+              </div>
+            </div>
 
-    <div class="col-md-5 offset-2" style="color: black; background: linear-gradient(45deg, #6DE5AC, #B9EA75, #DEC855); border-radius: 20px; padding: 10px;">
-      <h5 style="font-size: 14pt;">Eindhoven municipality, 12 hours left</h5>
-       <hr>
-      <p style="text-align: center">
-        Would you have 2H next week to share about your professional background with high school students ?
-      </p>
 
-      <button class="btn  margin_20">Yes</button>
-      <button class="btn  margin_20">No</button>
-    </div>
+          </div>
+        </div>
 
-  </div>
+      </div>
 
-      <Footer></Footer>
+       <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
     </main>
   </div>
 </template>
 
+<style scoped src="@/assets/css/community.css"></style>
+<style lang="scss" scoped>
+/*
+linear-gradient(45deg, #EC42FA, #6EC6E9);
+linear-gradient(45deg, #6DE5AC, #B9EA75, #DEC855); 
+*/
+</style>
 <script>
-import Sidebar from '@/components/partials/Sidebar'
-import Footer from '@/components/partials/Footer'
+import Sidebar from "@/components/partials/Sidebar";
+import Footer from "@/components/partials/Footer";
+import ButtonRadio from "@/components/elements/ButtonRadio";
+
 
 export default {
   name: 'Votes',
-  components: {
-    Sidebar,
-    Footer
-  },
+  components: { Sidebar, Footer, ButtonRadio },
   methods: {},
   data () {
-    return {}
+    return {
+       polls: [{
+      communityName: "Eindhoven municipality",
+      name: "VOTING_TYPE",
+      question: "Within this community, voting should be :",
+      answers: [{text: 'Direct',
+                 value: 'DIRECT'
+                },
+                {text: 'Representative',
+                 value: 'DELEGATE'
+                }]
+    },
+
+    {
+      communityName: "Eindhoven municipality",
+      name: "DELEGATES_COUNT",
+      question: "How many delegates should be elected to represent this community ?",
+      answers: [{text: '1-10',
+                 value: '1'
+                },
+                {text: '10-20',
+                 value: '1'
+                },
+                {text: '20-30',
+                 value: '2'
+                },
+                {text: '30-50',
+                 value: '3'
+                }]
+    },
+
+    {
+      communityName: "TEDxBrussels",
+      name: "MINIMAL_VOTE_PERCENT",
+      question: "What should be the minimum amount of voters for each vote ?",
+      answers:  [{text: '1%',
+                 value: '1'
+                },
+                {text: '5%',
+                 value: '5'
+                },
+                {text: '10%',
+                 value: '10'
+                },
+                {text: '15%',
+                 value: '15'
+                }]
+    },
+    ]
+    }
   }
 }
 </script>
 
-<style scoped>
-</style>

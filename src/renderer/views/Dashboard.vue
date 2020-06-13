@@ -6,11 +6,13 @@
       <h1>Dashboard</h1>
 
       <div class="row">
-      
-        <div class="article_showcase col col-lg-12" style="min-height: 150px;" v-on:click="push('article')">
+        <div
+          class="article_showcase col col-lg-12"
+          style="min-height: 150px;"
+          v-on:click="push('article')"
+        >
           <h4>Environment communities</h4>
         </div>
-     
       </div>
 
       <div class="row" style="padding-top: 25px;">
@@ -23,64 +25,73 @@
         </div>
       </div>
 
-
-     <h5 style="padding-top: 25px;">Trending communities</h5>
+      <h5 style="padding-top: 25px;">Trending communities</h5>
 
       <div class="row ranking">
-        <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/1.png" style="float: left"> 1. Eindhoven music festival</p>
-        </div>
+        <div
+          class="col col-md-6 col-lg-4"
+          v-for="(item, index) in trendingCommunities"
+          :key="'trendingCommunity-'+index"
+        >
+          <p>
+            <img
+              :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)"
+              style="float: left; width: 50px"
+            />
 
-        <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/2.png" style="float: left"> 2. Homework help</p>
-        </div>
-
-        <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/3.png" style="float: left"> 3. Antwerp Festival</p>
-        </div>
-
-        <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/4.png" style="float: left"> 4. Breda entrepreneurs</p>
-        </div>
-
-        <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/2.png" style="float: left"> 5. Elderly Help</p>
-        </div>
-
-         <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/4.png" style="float: left">6. Climate watch group</p>
-        </div>
-
-         <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/1.png" style="float: left"> 7. TEDxTilburg</p>
-        </div>
-
-         <div class="col col-md-6 col-lg-4">
-          <p> <img src="../assets/icons/3.png" style="float: left"> 8. Bradant students</p>
+            {{ item.communityName }}
+          </p>
         </div>
       </div>
 
-
-
-  <Footer></Footer>
+      <Footer></Footer>
     </main>
-
   </div>
 </template>
 
 <script>
-import Sidebar from '@/components/partials/Sidebar'
-import Footer from '@/components/partials/Footer'
+import Sidebar from "@/components/partials/Sidebar";
+import Footer from "@/components/partials/Footer";
 
 export default {
-  name: 'landing-page',
+  name: "landing-page",
   components: { Sidebar, Footer },
   methods: {
-    push (url) {
-      this.$router.push({ name: url })
+    push(url) {
+      this.$router.push({ name: url });
     }
+  },
+  data() {
+    return {
+      trendingCommunities: [
+        {
+          communityName: "Eindhoven music festival"
+        },
+        {
+          communityName: "Homework help"
+        },
+        {
+          communityName: "Antwerp festival"
+        },
+        {
+          communityName: "Breda entrerpreneurs"
+        },
+        {
+          communityName: "Elderly help"
+        },
+        {
+          communityName: "Climate watch group"
+        },
+        {
+          communityName: "TEDxBrussels"
+        },
+        {
+          communityName: "Bradant students"
+        }
+      ]
+    };
   }
-}
+};
 </script>
 
 <style>
@@ -130,12 +141,11 @@ export default {
   color: black;
 }
 
-
-.ranking p{
+.ranking p {
   font-size: 10pt;
 }
 
-.ranking .col{
+.ranking .col {
   margin-top: 20px;
 }
 </style>

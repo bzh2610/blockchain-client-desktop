@@ -44,32 +44,7 @@
               </div>
             </div>
 
-            <ul class="justify-content-end mb-0 pagination">
-              <li class="disabled page-item">
-                <a href="#pablo" tabindex="-1" class="page-link">
-                  <span><</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="active page-item">
-                <a href="#pablo" class="page-link">1</a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">
-                  2
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">3</a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">
-                  <span>></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
+
           </div>
         </div>
 
