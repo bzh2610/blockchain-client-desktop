@@ -2,10 +2,10 @@
   <div class="col col-lg-4" style="padding-right: 2.5%;">
     <div class="content bg-secondary" style="padding-left: 10%;">
       <img
-        :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(16)"
+        :src="'http://localhost:8080/'+name"
         style="width: 30%;"
       />
-      <span style="color: black;">TEDxBrussels</span>
+      <span style="color: black;">{{ name }}</span>
       <ul class="sidebar-menu">
         <li>
           <router-link to="/community">
@@ -76,6 +76,13 @@
 export default {
   name: "CommunitySidebar",
   components: {},
-  methods: {}
+  methods: {},
+  props:{
+    name: {
+      type: String,
+      required: true,
+      default: 'name'
+    }
+  }
 };
 </script>

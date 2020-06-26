@@ -23,7 +23,7 @@
                 <img
                   style="margin-left: -50%; margin-top: 45%;"
                   class="avatar"
-                  :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)"
+                  :src="'http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(6)"
                 />
               </div>
               <div
@@ -35,36 +35,11 @@
               </div>
             </div>
 
-            <ul class="justify-content-end mb-0 pagination">
-              <li class="disabled page-item">
-                <a href="#pablo" tabindex="-1" class="page-link">
-                  <span><</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="active page-item">
-                <a href="#pablo" class="page-link">1</a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">
-                  2
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">3</a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">
-                  <span>></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
+            <Pagination></Pagination>
           </div>
         </div>
 
-        <CommunitySidebar></CommunitySidebar>
+        <CommunitySidebar name="TEDxBrussels"></CommunitySidebar>
       </div>
 
        <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
@@ -76,10 +51,11 @@
 import Sidebar from "@/components/partials/Sidebar";
 import Footer from "@/components/partials/Footer";
 import CommunitySidebar from "@/components/community/CommunitySidebar";
+import Pagination from "@/components/elements/Pagination";
 
 export default {
   name: "communityAbout",
-  components: { Sidebar, Footer, CommunitySidebar },
+  components: { Sidebar, Footer, CommunitySidebar, Pagination },
   methods: {}
 };
 </script>

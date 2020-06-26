@@ -29,6 +29,7 @@ if (!process.env.IS_WEB) Vue.use(require('vue-electron'))
 Vue.http = Vue.prototype.$http = axios
 Vue.config.productionTip = false
 
+Vue.prototype.$avatarServer = 'http://localhost:8080/'
 /* eslint-disable no-new */
 new Vue({
   components: { App },

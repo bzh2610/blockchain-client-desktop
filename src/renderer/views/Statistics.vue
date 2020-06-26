@@ -2,8 +2,20 @@
   <div id="wrapper">
     <sidebar></sidebar>
 
-    <main class="main">
-      <h1>Statistics</h1>
+    <main class="main" style="background: rgb(243,245,250)"
+     :style="{background: 'url(http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(6)+') center / 160%'}"
+>
+      <div class="row">
+        <div class="article_showcase col col-lg-12" style="min-height: 50px; background: transparent;"></div>
+      </div>
+
+      <div class="row" style="position: relative; top: -20vh; padding: 20px;">
+        <div class="col col-lg-10 mx-auto" style="min-height: 50px;" >
+          <div class="content"  >
+            <div class="content-header" style="padding: 10px; padding-left: 20px;">
+               <h1>Statistics</h1>
+            </div>
+
       <div class="row chart">
         <div class="col-lg-8 chart_container">
           <p class="chart_title">Weekly active users</p>
@@ -22,11 +34,18 @@
           <apexchart type="heatmap" height="350" :options="chartOptions_H" :series="series_H"></apexchart>
         </div>
       </div>
-
-      <Footer></Footer>
+          </div>
+        </div>
+      </div>
+  
+       <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
     </main>
   </div>
 </template>
+
+<style scoped src="@/assets/css/community.css"></style>
+
+
 
 <script>
 /* eslint-disable */
@@ -44,7 +63,7 @@ export default {
   components: {
     Sidebar,
     Footer,
-    apexchart: VueApexCharts
+    apexchart: VueApexCharts,
   },
   methods: {
     generateData(count, yrange) {
@@ -256,14 +275,15 @@ export default {
 
 <style scoped>
 .chart {
-  width: calc(90vw - 200px);
+  width: calc(90%);
+  margin-left: 5%;
   margin-top: 20px;
 }
 
 .chart_container {
   border-radius: 20px;
   padding: 0px;
-  background: black;
+  background: transparent;
 }
 
 .chart_title {

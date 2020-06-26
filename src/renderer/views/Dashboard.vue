@@ -15,6 +15,27 @@
         </div>
       </div>
 
+
+      <h5 style="padding-top: 25px;">Most subscribed communities</h5>
+
+      <div class="row ranking">
+        <div
+          class="col col-md-6 col-lg-4"
+          v-for="(item, index) in trendingCommunities"
+          :key="'trendingCommunity-'+index"
+        >
+         
+            <img
+              :src="'http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(6)"
+              style="float: left; width: 50px;"
+            />
+          <p style="margin-left: 60px;">
+            {{ index+1 }}. {{ item.communityName }}<br>
+            {{ item.totalSubscribers }} subscribers
+          </p>
+        </div>
+      </div>
+
       <div class="row" style="padding-top: 25px;">
         <div class="article_showcase col col-md-6 event">
           <h4>Events</h4>
@@ -33,13 +54,14 @@
           v-for="(item, index) in trendingCommunities"
           :key="'trendingCommunity-'+index"
         >
-          <p>
+         
             <img
-              :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)"
-              style="float: left; width: 50px"
+              :src="'http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(6)"
+              style="float: left; width: 50px;"
             />
-
-            {{ item.communityName }}
+          <p style="margin-left: 60px;">
+            {{ index+1 }}. {{ item.communityName }}<br>
+            {{ item.weeklyNewSubscribers }} new subs. ( + {{ item.weeklyGrowth.toFixed(2) }}%)
           </p>
         </div>
       </div>
@@ -65,28 +87,52 @@ export default {
     return {
       trendingCommunities: [
         {
-          communityName: "Eindhoven music festival"
+          communityName: "Eindhoven music festival",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         },
         {
-          communityName: "Homework help"
+          communityName: "Homework help",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         },
         {
-          communityName: "Antwerp festival"
+          communityName: "Antwerp festival",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         },
         {
-          communityName: "Breda entrerpreneurs"
+          communityName: "Breda entrerpreneurs",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         },
         {
-          communityName: "Elderly help"
+          communityName: "Elderly help",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         },
         {
-          communityName: "Climate watch group"
+          communityName: "Climate watch group",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         },
         {
-          communityName: "TEDxBrussels"
+          communityName: "TEDxBrussels",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         },
         {
-          communityName: "Bradant students"
+          communityName: "Bradant students",
+          weeklyGrowth: 23.00,
+          weeklyNewSubscribers: 125,
+          totalSubscribers: 1566
         }
       ]
     };

@@ -14,29 +14,59 @@
               <span>Homepage</span>
             </div>
 
-            <div
+<div
               style="width: 80%; box-shadow: 0 0 12pt 0 rgba(136, 152, 170, 0.15) !important; margin: 30pt auto 30pt auto;"
-              v-for="i in 10"
-              v-bind:key="i"
             >
               <div style="width: calc(10% - 5px); display: inline-block; vertical-align: top;">
                 <img
                   style="margin-left: -50%; margin-top: 45%;"
                   class="avatar"
-                  :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)"
+                  :src="'http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(6)"
                 />
               </div>
               <div
                 class="post-content"
                 style="display: inline-block; width: calc(90%); padding: 25px; top: 0px;"
               >
+              <form @submit.prevent="newPost">
                 <small>{{ (Math.random()*0xFFFFFF<<0).toString(16) }}</small>
                 <br />
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                 Morbi vel ex dolor. Aliquam ut nisi viverra purus condimentum tempor
-                 at vulputate justo. Mauris eu condimentum mi. Fusce non magna ligula.
-                 Phasellus luctus fringilla quam, eu ultrices dolor rutrum posuere.
-                 Phasellus imperdiet aliquet dignissim.
+                 <b-field label="Post a new message :">
+            <b-input name="post" style="color: black;" maxlength="200" type="textarea" placeholder="What do you want to discuss ?"></b-input>
+        </b-field>
+        <span>{{ formError }}</span>
+        <input class="button" type="submit" value="Publish"/>
+
+              </form>
+              </div>
+            </div>
+
+
+
+
+
+
+
+
+            <div
+              style="width: 80%; box-shadow: 0 0 12pt 0 rgba(136, 152, 170, 0.15) !important; margin: 30pt auto 30pt auto;"
+              v-for="post in this.posts"
+              v-bind:key="post"
+            >
+              <div style="width: calc(10% - 5px); display: inline-block; vertical-align: top;">
+                <img
+                  style="margin-left: -50%; margin-top: 45%;"
+                  class="avatar"
+                  :src="'http://localhost:8080/'+post.user"
+                />
+              </div>
+              <div
+                class="post-content"
+                style="display: inline-block; width: calc(90%); padding: 25px; top: 0px;"
+              >
+                <small>{{ post.user }}</small>
+                <br />
+                <p>{{ post.post }}
                 </p>
               <div class="actions" style="margin-top: 5pt; float: left; display: inline-block;">
               <table>
@@ -46,10 +76,10 @@
  </td><td><font-awesome-icon icon="comments" size="sm" class="comments" />
  </td><td><font-awesome-icon icon="share" size="sm" class="share" />
  </td></tr><tr>
-   <td>265</td>
-   <td>12</td>
-   <td>102</td>
-   <td>43</td>
+   <td>{{ post.up }}</td>
+   <td>{{ post.down }}</td>
+   <td>{{ post.comments }}</td>
+   <td>{{ post.shared }}</td>
    </tr>
  </table>
               </div>
@@ -60,7 +90,7 @@
           </div>
         </div>
 
-        <CommunitySidebar></CommunitySidebar>
+        <CommunitySidebar name="TEDxBrussels"></CommunitySidebar>
       </div>
 
       <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
@@ -73,11 +103,53 @@ import Sidebar from "@/components/partials/Sidebar";
 import Footer from "@/components/partials/Footer";
 import CommunitySidebar from "@/components/community/CommunitySidebar";
 import Pagination from "@/components/elements/Pagination";
+import ButtonRadio from "@/components/elements/ButtonRadio";
 
 export default {
   name: "article",
-  components: { Sidebar, Footer, CommunitySidebar, Pagination },
-  methods: {}
+  components: { Sidebar, Footer, CommunitySidebar, Pagination, ButtonRadio },
+  data(){
+    return{
+      user : (Math.random()*0xFFFFFF<<0).toString(16),
+      posts : [ ],
+      formError: ""
+    }
+  },
+  mounted(){
+    for(var i = 0; i<10; i++){
+      this.posts.push({
+        user: (Math.random()*0xFFFFFF<<0).toString(16),
+        post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\
+                 Morbi vel ex dolor. Aliquam ut nisi viverra purus condimentum tempor\
+                 at vulputate justo. Mauris eu condimentum mi. Fusce non magna ligula.\
+                 Phasellus luctus fringilla quam, eu ultrices dolor rutrum posuere.\
+                 Phasellus imperdiet aliquet dignissim.",
+        up: (Math.random()*1000).toFixed(0),
+        down: (Math.random()*100).toFixed(0),
+        comments : (Math.random()*1000).toFixed(0),
+        shared : (Math.random()*1000).toFixed(0)
+      })
+    }
+  },
+  methods: {
+    newPost(submitEvent){
+      this.formError = ""
+      var post = submitEvent.target.elements.post.value
+      
+      if(post.length > 10){
+      this.posts.unshift({
+        user: this.user,
+        post: post,
+        up: 0,
+        down: 0,
+        comments : 0,
+        shared : 0
+      })
+    }else {
+      this.formError = "Your post must be at least 10 characters long."
+    }
+  }
+  }
 };
 </script>
 <style scoped lang="less">
@@ -108,5 +180,30 @@ export default {
   color: lightgrey;
 }
 
+
+
+/* New post */
+.button {
+  display: inline-block;
+  color: white;
+  font-weight: 500;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 60px;
+  width: 100%;
+  vertical-align: middle;
+  line-height: 60px; /* CHANGE THIS FOR MULTI LINE */
+  height: 100%;
+  font-weight: 400;
+  font-size: 14pt;
+  color: rgba(255, 255, 255, 0.747);
+  background: #2CB1D1;
+}
+/* Hovered */
+.button:hover, .button:active {
+  font-weight: 600;
+  outline: none;
+  color: white;
+}
 </style>
 <style scoped src="@/assets/css/community.css"></style>

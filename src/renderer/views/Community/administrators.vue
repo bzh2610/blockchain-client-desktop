@@ -19,50 +19,29 @@
                 <th>User</th>
                 <th>Votes</th>
                 <th>Ranking</th>
+                <th></th>
               </tr>
               <tr v-for="i in 10" v-bind:key="i">
                 <td>
                   <img
                     class="avatar"
-                    :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(16)"
+                    :src="'http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(16)"
                   />
                 </td>
                 <td>{{ (Math.random()*0xFFFFFF<<0).toString(16) }}</td>
                 <td>{{ 232421-1535*i }}</td>
                 <td>{{ i }}</td>
+                <td>
+                  <font-awesome-icon icon="envelope-open" size="lg"></font-awesome-icon>
+                </td>
               </tr>
             </table>
 
-            <ul class="justify-content-end mb-0 pagination">
-              <li class="disabled page-item">
-                <a href="#pablo" tabindex="-1" class="page-link">
-                  <span>&lt;</span>
-                  <span class="sr-only">Previous</span>
-                </a>
-              </li>
-              <li class="active page-item">
-                <a href="#pablo" class="page-link">1</a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">
-                  2
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">3</a>
-              </li>
-              <li class="page-item">
-                <a href="#pablo" class="page-link">
-                  <span>></span>
-                  <span class="sr-only">Next</span>
-                </a>
-              </li>
-            </ul>
+            <Pagination></Pagination>
           </div>
         </div>
 
-        <CommunitySidebar></CommunitySidebar>
+        <CommunitySidebar name="TEDxBrussels"></CommunitySidebar>
       </div>
 
  <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
@@ -74,10 +53,11 @@
 import Sidebar from "@/components/partials/Sidebar";
 import Footer from "@/components/partials/Footer";
 import CommunitySidebar from "@/components/community/CommunitySidebar";
+import Pagination from "@/components/elements/Pagination";
 
 export default {
   name: "communityAdmin",
-  components: { Sidebar, Footer, CommunitySidebar },
+  components: { Sidebar, Footer, CommunitySidebar, Pagination },
   methods: {}
 };
 </script>

@@ -3,7 +3,7 @@
     <sidebar></sidebar>
 
     <main class="main" style="background: rgb(243,245,250)"
-     :style="{background: 'url(https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)+') center / 160%'}"
+     :style="{background: 'url(http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(6)+') center / 160%'}"
 >
       <div class="row">
         <div class="article_showcase col col-lg-12" style="min-height: 50px; background: transparent;"></div>
@@ -24,7 +24,7 @@
                 <img
                   style="margin-left: -50%; margin-top: 45%;"
                   class="avatar"
-                  :src="'https://avatar.lisk.ws/'+(Math.random()*0xFFFFFF<<0).toString(6)"
+                  :src="'http://localhost:8080/'+(Math.random()*0xFFFFFF<<0).toString(6)"
                 />
               </div>
               <div
@@ -48,7 +48,7 @@
           </div>
         </div>
 
-        <CommunitySidebar></CommunitySidebar>
+        <CommunitySidebar name="TEDxBrussels"></CommunitySidebar>
       </div>
 
        <Footer style="background: rgba(10,10,10, 0.7);  padding-bottom: 5px;"></Footer>
