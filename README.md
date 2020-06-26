@@ -1,6 +1,8 @@
-# vue-electron
+# Votechain
 
-> An electron-vue project
+![illustration](https://i.imgur.com/OHmGxD1.png)
+
+> A blockchain client prototype for Horizon internet technologies. 
 
 #### Build Setup
 
@@ -17,11 +19,15 @@ npm run build
 # run unit & end-to-end tests
 npm test
 
-
 # lint all JS/Vue component files in `src/`
 npm run lint
 
 ```
+
+### If some images appear to be missing :
+
+To have the lisk images integration, pease clone this repo : https://github.com/tobiaslins/lisk-avatar and run it on port 8080
+
 
 ---
 
